@@ -1,0 +1,29 @@
+yolo_weights
+
+# Ignore Python cache files
+__pycache__/
+*.pyc
+*.pyo
+
+# Ignore virtual environments
+venv/
+env/
+
+# Ignore large files (model weights)
+*.pt
+
+# Ignore log and temporary files
+*.log
+*.tmp
+*.swp
+*.swo
+
+# Ignore dataset cache (if using YOLO caching)
+data/.cache/
+
+# Ignore Jupyter Notebook checkpoints (if used)
+.ipynb_checkpoints/
+
+# Ignore system files
+.DS_Store
+Thumbs.db
