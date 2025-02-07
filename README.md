@@ -20,7 +20,7 @@ Public-Safety-System/
 │   │── sort.py            # Object tracking algorithm (SORT)
 │   │── weapon.py          # Detects weapons
 │   │── yolo_cars.py       # Vehicle tracking
-│   └── yolo_weights/      # YOLO model weights , will download and appear when you run programs.
+│── yolo_weights/          # YOLO model weights , will download and appear when you run programs.
 │── .gitignore             # Specifies files to ignore in version control
 │── README.md              # Project documentation
 │── requirements.txt       # List of dependencies
