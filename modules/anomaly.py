@@ -5,7 +5,7 @@ from ultralytics import YOLO
 
 # Load YOLO model for person detection
 def load_yolo_model():
-    return YOLO('yolo_weights/yolov8n.pt')  # Updated to the correct model path
+    return YOLO('yolo_weights/yolov8n.pt')  
 
 # Load face detection model
 def load_face_detector():
@@ -25,7 +25,7 @@ def get_face_bbox(image_path, face_detector):
     return None
 
 # Check if two bounding boxes represent the same person
-def is_same_person(face_bbox, ref_bbox, threshold=40):
+def is_same_person(face_bbox, ref_bbox, threshold=70):
     ref_center = [(ref_bbox[0] + ref_bbox[2]) / 2, (ref_bbox[1] + ref_bbox[3]) / 2]
     face_center = [(face_bbox[0] + face_bbox[2]) / 2, (face_bbox[1] + face_bbox[3]) / 2]
     return distance.euclidean(ref_center, face_center) < threshold
@@ -91,7 +91,7 @@ if __name__ == "__main__":
     face_detector = load_face_detector()
 
     # Path to reference image
-    ref_image_path = "data/Images/4.jpg"  # Updated to the correct reference image path
+    ref_image_path = "data/Images/4.jpg"    # place the target's image with correct path over here 
 
     # Get the reference face bounding box
     ref_face_bbox = get_face_bbox(ref_image_path, face_detector)

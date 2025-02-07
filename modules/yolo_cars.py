@@ -5,9 +5,9 @@ import math
 import numpy as np
 from sort import *
 
-cap = cv2.VideoCapture("data/Videos/cars.mp4") # path of video
+cap = cv2.VideoCapture("data/Videos/cars.mp4") 
 
-model = YOLO('yolo_weights/yolov8l.pt')  # Correct path for YOLO model
+model = YOLO('yolo_weights/yolov8l.pt') 
 
 classNames = ["person", "bicycle", "car", "motorbike", "aeroplane", "bus", "train", "truck", "boat",
               "traffic light", "fire hydrant", "stop sign", "parking meter", "bench", "bird", "cat",

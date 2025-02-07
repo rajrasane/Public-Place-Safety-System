@@ -4,14 +4,11 @@ import cvzone
 import math
 import numpy as np
 from sort import *
-import os
-
-print(os.getcwd())  # Prints the current working directory
 
 # Load the video and model with corrected paths
-cap = cv2.VideoCapture("data/Videos/people.mp4")  # Correct path for video file
+cap = cv2.VideoCapture("data/Videos/people.mp4") 
 
-model = YOLO('yolo_weights/yolov8l.pt')  # Correct path for YOLO model
+model = YOLO('yolo_weights/yolov8l.pt') 
 
 # Class names for object detection
 classNames = ["person", "bicycle", "car", "motorbike", "aeroplane", "bus", "train", "truck", "boat",
@@ -26,7 +23,7 @@ classNames = ["person", "bicycle", "car", "motorbike", "aeroplane", "bus", "trai
               "teddy bear", "hair drier", "toothbrush"]
 
 # Load and resize the mask to match the frame size
-mask = cv2.imread("data/Images/mask.png", 0)  # Correct path for the mask image
+mask = cv2.imread("data/Images/mask.png", 0)  
 total_counts = []
 tracker = Sort(max_age=20, min_hits=3, iou_threshold=0.3)
 limits = [400 , 297, 673, 297]
@@ -43,7 +40,7 @@ while True:
     # Ensure `mask` and `img` are compatible
     imgRegion = cv2.bitwise_and(img, img, mask=mask_resized)
 
-    imgGraphics = cv2.imread("data/Images/graphics.png", cv2.IMREAD_UNCHANGED)  # Correct path for graphics image
+    imgGraphics = cv2.imread("data/Images/graphics.png", cv2.IMREAD_UNCHANGED) 
     img = cvzone.overlayPNG(img, imgGraphics, (0, 0))
 
     # Initialize detections array

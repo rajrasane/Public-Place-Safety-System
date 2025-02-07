@@ -1,11 +1,10 @@
 import cv2
-import torch
 import cvzone
 import numpy as np
 from ultralytics import YOLO
 
 # Load the YOLO model for weapon detection
-model = YOLO('yolo_weights/yolov8l.pt')  # Correct path for YOLO model
+model = YOLO('yolo_weights/yolov8l.pt') 
 
 # Start webcam capture
 cap = cv2.VideoCapture(0)  # Webcam is used, so no need for path here
