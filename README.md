@@ -1,7 +1,7 @@
-# Public Safety System
+# Public Place Safety System
 
 ## Overview
-The **Public Safety System** is an AI-powered surveillance system designed to enhance public safety by detecting anomalies, counting people, identifying weapons, and tracking vehicles in real time using YOLO models and computer vision techniques.
+The **Public Place Safety System** is an AI-powered surveillance system designed to enhance public safety by detecting anomalies, counting people, identifying weapons, and tracking vehicles in real time using YOLO models and computer vision techniques.
 
 ## Features
 - **Anomaly Detection**: Identifies unusual activities in monitored areas.
@@ -29,8 +29,8 @@ Public-Safety-System/
 ## Installation
 ### 1. Clone the Repository
 ```sh
-git clone https://github.com/rajrasane/Public-Safety-System.git
-cd Public-Safety-System
+git clone https://github.com/rajrasane/Public-Place-Safety-System.git
+cd Public-Place-Safety-System
 ```
 ### 2. Create and Activate a Virtual Environment (Optional but Recommended)
 ```sh
